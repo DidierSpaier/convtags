@@ -1,0 +1,60 @@
+Bugs and issues in the conversion from DokuWiki to AsciiDoc
+-----------------------------------------------------------
+
+This document has been last updated on 14/10/2015.
+
+
+After a forced line break, in AsciiDoc the alignment set for an image is
+not respected, i.e. align="center" doesn't produce the intended behavior.
+
+Workaraound: instead of using a forced line break. insert an empty line 
+before the image link.
+
+--
+
+More generally, avoid using forced line breaks unless necessary, mainly
+to indicate the continuation of a list item.
+
+--
+
+If a line intended to be a list item (beginning with "  *" for instance)
+is predeced by a line beginning with "  " (at least two spaces)  it will be
+converted as a Code block instead.
+
+Workaround: remove all spaces in a line otherwise empty in the DokuWiki file,
+unless it really begins a Code block.
+
+-- 
+
+Some characters need to be escaped. As a result some lines in the converted
+AsciiDoc page can be borked. This is the case for instance of:
+http://docs.slackware.com/howtos:general_admin:cli_constructs_and_useful_info
+
+Involved characters are not properky converted (there may be others):
+Character or pattern  Issue with AsciiDoc
+^text^                renders "text" as superscript 
+*some text*           renders "some text" in bold
+{<name>}              interpreted as {<attribute>}. If <attribute> does
+                      not exist the line is deleted.
+
+I don't know a general workaround.
+
+--
+ 
+List items that embed a Code block at once (instead of after a "\n+\n"
+indicating that the list item continues) are not well rendered in AsciiDoc.
+
+Workaraound: in DokuWiki, put the opening <code> or <file> tag at end of
+line (but ths change the visual appearance in DokuWiki).
+
+--
+
+Images are rendered as block elements in Asciidoc, not inline. This can
+change the layout, i.e. lines that iclude a small images are cut.
+
+Similarly, if a line includes three images (left, center, right) only two
+of them are aligned in the converted AsciiDoc document.
+
+But including the images as inline elements instead of as block elements in
+AsciiDoc has other draw backs, hence this choice.
+
