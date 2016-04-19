@@ -59,7 +59,7 @@ Features and limitations
 Most syntactic DokuWiki constructs can be converted to AsciiDoc.
 
 Known limitations in the conversion from DokuWiki to AsciiDoc:
-No syntax checking is done of the input file.
+* No syntax checking is done of the input file.
 * Appending a downloadable file (code snippet) to a Code block is not
 available (the link to the file is silently discarded by the converter).
 * The links to a location in the same page are not converted.
