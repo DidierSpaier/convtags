@@ -6,6 +6,7 @@ What is convtags
 ----------------
 
 convtags is a bidirectional converter:
+
 DokuWiki => AsciiDoc => Dokuwiki
   
 Written with portability in mind, it should work on any UNIX® like operating
@@ -14,8 +15,8 @@ system.
 Target use cases
 ----------------
 
-Convert a wiki powered by DokuWiki to a static website
-Ease the translation of a wiki powered by DokuWiki
+* Convert a wiki powered by DokuWiki to a static website
+* Ease the translation of a wiki powered by DokuWiki
 
 Warning: the conversion from AsciiDoc to DokuWiki is only provided to convert
 back a document previously converted from DokuWiki to AsciiDoc. It can handle
