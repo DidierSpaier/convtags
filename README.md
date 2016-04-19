@@ -73,7 +73,7 @@ opening and closing marks are on the same line.
 * External images (in DokuWiki parlance) are not displayed.
 
 In addition to the basic DokuWiki syntax, the graphical rendering of
-admonitions (through he Note plugin) is converted.
+admonitions (through the Note plugin) is converted.
 
 Other plugins can be needed to properly display the documents in DokuWiki
 format, be it in the genuine or converted back ones. Examples are the
@@ -87,7 +87,7 @@ Author
 
 Didier Spaier, Paris, France
 
-This document was last updated on 05/10/2015 
+This document was last updated on 19/04/2016 
 
 
 
