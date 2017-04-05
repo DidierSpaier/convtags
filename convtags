@@ -1646,11 +1646,11 @@ s//]$$/g
 s//$$/g
 s//$$/g
 s//$$/g
-s//++/g
+s//`/g
 s//`/g
 s//'/g
-s//``/g
-s//''/g
+s//"/g
+s//"/g
 # Restore the [source,<language>] and [verse] patterns.
 s//[[/g
 s//]]/g
